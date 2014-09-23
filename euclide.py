@@ -28,3 +28,6 @@ def ppcm(a,b):
   if a==b:
     return a
   return abs(a*b)/pgcd(a,b)
+def isDivisible(a,b):
+  """Tells if b devides a"""
+  return (a%b==0)

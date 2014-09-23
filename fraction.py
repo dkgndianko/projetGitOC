@@ -72,3 +72,5 @@ class Fraction:
     return Fraction(self.__numerateur*other.__numerateur,self.__denominateur*other.__denominateur)
   def __div__(self,other):
     return Fraction(self.__numerateur*other.__denominateur,self.__denominateur*other.__numerateur)
+  def absoluteValue(self):
+    return self.__abs__()
