@@ -4,11 +4,8 @@ from string import maketrans
 from string import printable
 MAPPING=["éèêëçàöô","eeeecaoo"]# POUUR DES RAISONS DE TRANSFORMATION
 MYPRINTABLE=printable+MAPPING[0] #C'est pour la plage de lettres à utiliser
-#MYPRINTABLE=printable+''
 def reordonner_alphabet(phrase):
   """Réordonner l'alphabet en utilisant la phrase comme mot clé"""
-  #phrase=phrase.lower()
-  #phrase=normaliser(phrase)
   longueur=len(phrase)
   resultat=""
   alphabet=map(None,MYPRINTABLE)
@@ -24,7 +21,6 @@ def normaliser(texte):
   return texte.translate(myTans)
 def encoder_vigenere(texte,cle):
   TRANS=maketrans(MYPRINTABLE,reordonner_alphabet(cle))
-  #texte=normaliser(texte)
   return texte.lower().translate(TRANS)
 def decoder_vigenere(texte,cle):
   TRANS=maketrans(reordonner_alphabet(cle),MYPRINTABLE)
